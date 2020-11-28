@@ -1,0 +1,32 @@
+﻿@model appWeb.Web.Models.EditUserViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>User</h4>
+
+<a asp-action="Add_Friend" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> Add Friend</a>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="ChangeUser" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            @*<input type="hidden" asp-for="ImageId" />*@
+
+            <partial name="_User" />
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="ChangePassword" class="btn btn-warning">Change Password</a>
+                <a asp-action="Set_Publications" class="btn btn-info">My Publications</a>
+                <a asp-action="Friends" class="btn btn-group">Friends</a>
+            </div>
+        </form>
+    </div>
+    @*<div class="col-md-4">
+            <img src="@Model.ImageFullPath" style="width:250px;height:250px;border-radius:50%" />
+        </div>*@
+</div>

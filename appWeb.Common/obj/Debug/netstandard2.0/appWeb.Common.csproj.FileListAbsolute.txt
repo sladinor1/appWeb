@@ -1,0 +1,9 @@
+C:\Proyectos\appWeb\appWeb.Common\bin\Debug\netstandard2.0\appWeb.Common.deps.json
+C:\Proyectos\appWeb\appWeb.Common\bin\Debug\netstandard2.0\appWeb.Common.dll
+C:\Proyectos\appWeb\appWeb.Common\bin\Debug\netstandard2.0\appWeb.Common.pdb
+C:\Proyectos\appWeb\appWeb.Common\obj\Debug\netstandard2.0\appWeb.Common.csprojAssemblyReference.cache
+C:\Proyectos\appWeb\appWeb.Common\obj\Debug\netstandard2.0\appWeb.Common.AssemblyInfoInputs.cache
+C:\Proyectos\appWeb\appWeb.Common\obj\Debug\netstandard2.0\appWeb.Common.AssemblyInfo.cs
+C:\Proyectos\appWeb\appWeb.Common\obj\Debug\netstandard2.0\appWeb.Common.csproj.CoreCompileInputs.cache
+C:\Proyectos\appWeb\appWeb.Common\obj\Debug\netstandard2.0\appWeb.Common.dll
+C:\Proyectos\appWeb\appWeb.Common\obj\Debug\netstandard2.0\appWeb.Common.pdb

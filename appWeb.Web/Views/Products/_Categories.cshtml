@@ -1,0 +1,10 @@
+﻿@model IEnumerable<appWeb.Common.Entities.Category>
+
+<body>
+    @foreach (var item in Model)
+    {
+        <div>
+            @Html.DisplayFor(modelItem => item.Name)
+        </div>
+    }
+</body>

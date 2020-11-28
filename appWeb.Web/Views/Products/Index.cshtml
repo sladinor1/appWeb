@@ -1,0 +1,92 @@
+﻿@model IEnumerable<appWeb.Web.Models.ProductCatalogyViewModel>
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<br />
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Add Publication</a>
+</p>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Publications</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-responsive table-striped" id="MyTable">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Author)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Tittle)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Lot)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ImageFile)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Description)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Author)
+                            </td>
+                            <th>
+                                @Html.DisplayFor(modelItem => item.Tittle)
+                            </th>
+                            <th>
+                                @Html.DisplayFor(modelItem => item.Lot)
+                            </th>
+                            <th>
+                                @if (item.ProductImages != null)
+                                {
+                                    <img src="@item.ProductImages.FirstOrDefault().ImageFullPath" style="width:100px;height:100px;max-width: 100%; height: auto;" />
+                                }
+                            </th>
+                            <th>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </th>
+                            <td>
+                                @*<a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit <i class="glyphicon glyphicon-pencil"></i></a>*@
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details <i class="glyphicon glyphicon-align-justify"></i></a>
+                                @*<a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger deleteItem">Delete <i class="glyphicon glyphicon-trash"></i></a>*@
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="/js/deleteDialog.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#MyTable').DataTable();
+
+            // Delete item
+            //sc_deleteDialog.openModal('deleteItem', true, 'btnYesDelete', '/Publications/Delete/', false);
+        });
+    </script>
+}

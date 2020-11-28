@@ -1,0 +1,26 @@
+﻿@model appWeb.Web.Data.Entities.User
+
+@{
+    ViewData["Title"] = "Find";
+}
+
+<h2>Search</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add_Friend">
+            <br></br>
+            <div class="form-group">
+                <label asp-for="@Model.UserName" class="control-label"></label>
+                <input asp-for="@Model.UserName" class="form-control" />
+                <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+                @*<a asp-action="Index" class="btn btn-success">Back to List</a>*@
+                @*<a asp-action="search" class="btn btn-success">Back to List</a>*@
+            </div>
+        </form>
+    </div>
+</div>
+    
