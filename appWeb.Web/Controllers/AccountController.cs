@@ -332,19 +332,16 @@ namespace appWeb.Web.Controllers
 
             Response response = _mailHelper.SendMail(from.UserName, user.UserName + " Has aceptedd your invitation! ", user.UserName + " Has aceptedd your invitation! ");
 
-            Friend data_1 = new Friend
-            {
-                FirstPersonId = from.Id,
-                SecondPersonId = user.Id
-            };
-            Friend data_2 = new Friend
-            {
-                FirstPersonId = user.Id,
-                SecondPersonId = from.Id
-            };
-            _context.Add(data_1);
-            _context.Add(data_2);
-
+            var uno = await _context.Friends
+                .FirstOrDefaultAsync(f => f.FirstPersonId == user.Id);
+            var dos = await _context.Friends
+                .FirstOrDefaultAsync(f => f.FirstPersonId == from.Id);
+            uno.Relation = true;
+            dos.Relation = true;
+            _context.Update(uno);
+            await _context.SaveChangesAsync();
+            _context.Update(dos);
+            await _context.SaveChangesAsync();
             return RedirectToAction("Index","Home");
         }
 
@@ -411,8 +408,21 @@ namespace appWeb.Web.Controllers
                 $"plase click in this link:<p></br></br><a href = \"{Link}\">Acept Friend</a><p>");
             if (response.IsSuccess)
             {
+                Friend data_1 = new Friend
+                {
+                    FirstPersonId = from.Id,
+                    SecondPersonId = user.Id
+                };
+                Friend data_2 = new Friend
+                {
+                    FirstPersonId = user.Id,
+                    SecondPersonId = from.Id
+                };
+                _context.Add(data_1);
+                _context.Add(data_2);
+                await _context.SaveChangesAsync();
                 ViewBag.Message = "The invitation has been sended.";
-                return RedirectToAction("Add_Friend", "Account");
+                return RedirectToAction("Add_Friend", "Account");             
             }
             return RedirectToAction("Add_Friend", "Account");
         }

@@ -15,5 +15,7 @@ namespace appWeb.Web.Data.Entities
 
         [Required]
         public string SecondPersonId { get; set; }
+
+        public bool Relation { get; set; }
     }
 }
