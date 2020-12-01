@@ -68,7 +68,7 @@ using appWeb.Web.Models;
             WriteLiteral("\r\n<p>\r\n    ");
             EndContext();
             BeginContext(229, 107, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c6c0ef9e5f24f5ca5f26e642c84533c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "185df7e9bd8946afbfba81c65375e9ba", async() => {
                 BeginContext(276, 56, true);
                 WriteLiteral("<i class=\"glyphicon glyphicon-plus\"></i> Add Publication");
                 EndContext();
@@ -230,7 +230,7 @@ WriteAttributeValue("", 2391, item.ProductImages.FirstOrDefault().ImageFullPath,
             WriteLiteral("\r\n                                </th>\r\n                                <td>\r\n                                    ");
             EndContext();
             BeginContext(2825, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3bc0290c18b841b894a1513e86eba3ff", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5e0376e9cfc4e10bd40258a03cbe010", async() => {
                 BeginContext(2894, 47, true);
                 WriteLiteral("Edit <i class=\"glyphicon glyphicon-pencil\"></i>");
                 EndContext();
@@ -266,7 +266,7 @@ WriteAttributeValue("", 2391, item.ProductImages.FirstOrDefault().ImageFullPath,
             WriteLiteral("\r\n                                    ");
             EndContext();
             BeginContext(2983, 133, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b0200cb7d7c4e12b676b23ae1f37f49", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f67f649643a4e4c853c740cd6fdbffa", async() => {
                 BeginContext(3064, 48, true);
                 WriteLiteral("Delete <i class=\"glyphicon glyphicon-trash\"></i>");
                 EndContext();
