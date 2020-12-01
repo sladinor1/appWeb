@@ -1,10 +1,12 @@
 ﻿using appWeb.Common.Entities;
 using appWeb.Web.Data;
+using appWeb.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -130,6 +132,36 @@ namespace appWeb.Web.Controllers
             _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Filter(int id)
+        {
+            var category = await _context.CategoryProduct.Where(c => c.IdCategory == id).ToListAsync();
+            ICollection<ProductCatalogyViewModel> products = new Collection<ProductCatalogyViewModel>();
+            if (category != null)
+            {
+                foreach (var item in category)
+                {
+                    var images = await _context.ProductImages.Where(p => p.ProductId == item.IdProduct).ToListAsync();
+                    ICollection<ProductImage> list = new Collection<ProductImage>();
+                    foreach (var j in images)
+                    {
+                        list.Add(j);
+                    }
+                    var pv = await _context.Products.FindAsync(item.IdProduct);
+                    products.Add(new ProductCatalogyViewModel
+                    {
+                        Id = pv.Id,
+                        Description = pv.Description,
+                        Tittle = pv.Tittle,
+                        Author = pv.Author,
+                        Price = pv.Price,
+                        Lot = pv.Lot,
+                        ProductImages = list
+                    });
+                }
+            }
+            return View(products);
         }
     }
 }

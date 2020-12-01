@@ -12960,6 +12960,7 @@
       "Microsoft.VisualStudio.Web.BrowserLink >= 2.1.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.10",
       "SendGrid >= 9.21.2",
+      "System.Collections >= 4.3.0",
       "appWeb.Common >= 1.0.0",
       "webSocketManager >= 1.0.1"
     ]
@@ -13067,6 +13068,10 @@
           "SendGrid": {
             "target": "Package",
             "version": "[9.21.2, )"
+          },
+          "System.Collections": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           },
           "webSocketManager": {
             "target": "Package",

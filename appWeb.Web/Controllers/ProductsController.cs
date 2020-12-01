@@ -112,7 +112,7 @@ namespace appWeb.Web.Controllers
                 }
                 ProductImage img = new ProductImage { ImageFullPath = $"https://localhost:44371/images/Products/{Pimage.FileName}",
                     ProductId = product.Id };
-                ICollection<ProductImage> list = new Collection<ProductImage>();
+                List<ProductImage> list = new List<ProductImage>();
                 list.Add(img);
                 product.ProductImages = list;
                 _context.Add(product);
@@ -120,6 +120,7 @@ namespace appWeb.Web.Controllers
                 {
                     _context.Add(item);
                 }
+                await _context.SaveChangesAsync();
                 if (productcatalogyviewmodel.CategoryList != null)
                 {
                     foreach (var item in productcatalogyviewmodel.CategoryList)
@@ -127,8 +128,10 @@ namespace appWeb.Web.Controllers
                         CategoryProduct relation = new CategoryProduct();
                         if (item.Checked == true)
                         {
-                            relation.IdProduct = product.Id;
-                            relation.IdCategory = item.Id;
+                            var pr = await _context.Products.FirstOrDefaultAsync(p => p.Tittle == product.Tittle);
+                            var ct = await _context.Categories.FirstOrDefaultAsync(c => c.Name == item.Name);
+                            relation.IdProduct = pr.Id;
+                            relation.IdCategory = ct.Id;
                             _context.Add(relation);
                         }
                     }

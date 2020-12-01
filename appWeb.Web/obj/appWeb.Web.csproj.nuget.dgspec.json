@@ -168,6 +168,10 @@
               "target": "Package",
               "version": "[9.21.2, )"
             },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "webSocketManager": {
               "target": "Package",
               "version": "[1.0.1, )"

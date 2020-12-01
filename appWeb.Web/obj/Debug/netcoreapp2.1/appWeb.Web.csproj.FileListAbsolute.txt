@@ -14,7 +14,6 @@ C:\Proyectos\appWeb\appWeb.Web\bin\Debug\netcoreapp2.1\appWeb.Common.pdb
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.csprojAssemblyReference.cache
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.AssemblyInfoInputs.cache
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.AssemblyInfo.cs
-C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.csproj.CoreCompileInputs.cache
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.RazorAssemblyInfo.cache
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.RazorAssemblyInfo.cs
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.TagHelpers.input.cache
@@ -62,3 +61,5 @@ C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.csproj.CopyCom
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.dll
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.pdb
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.genruntimeconfig.cache
+C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.csproj.CoreCompileInputs.cache
+C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\Razor\Views\Categories\Filter.cshtml.g.cs

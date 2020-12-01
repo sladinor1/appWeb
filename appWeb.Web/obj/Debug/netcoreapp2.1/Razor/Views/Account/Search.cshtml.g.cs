@@ -109,7 +109,7 @@ using appWeb.Web.Models;
             WriteLiteral("\r\n                                </td>\r\n                                <td>\r\n                                    ");
             EndContext();
             BeginContext(1140, 159, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "513b540d6a1640818fb79c7c32801ddb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b725a47efcb41f58edab90e66cb201d", async() => {
                 BeginContext(1248, 47, true);
                 WriteLiteral("Invite <i class=\"glyphicon glyphicon-send\"></i>");
                 EndContext();
@@ -162,7 +162,7 @@ using appWeb.Web.Models;
             WriteLiteral("                    </tbody>\r\n                </table>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    ");
             EndContext();
             BeginContext(1510, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3df01763ff844b25a19aa14845c88020", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e121cf772224502bda8d95f2193a58c", async() => {
                 BeginContext(1561, 12, true);
                 WriteLiteral("Search Again");
                 EndContext();
