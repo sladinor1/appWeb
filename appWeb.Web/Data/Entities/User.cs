@@ -1,9 +1,11 @@
 ﻿using appWeb.Common.Entities;
 using appWeb.Web.Chat;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -35,10 +37,9 @@ namespace appWeb.Web.Data.Entities
         [Display(Name = "User Type")]
         public UserType UserType { get; set; }
 
-        public static implicit operator User(IdentityResult v)
-        {
-            throw new NotImplementedException();
-        }
+        [NotMappedAttribute]
+        [Display(Name = "Image")]
+        public IFormFile ImageFile { get; set; }
 
         //[Display(Name = "Image")]
         //public Guid ImageId { get; set; }

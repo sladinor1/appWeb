@@ -66,7 +66,7 @@ using appWeb.Web.Models;
             WriteLiteral("\r\n<p>\r\n    ");
             EndContext();
             BeginContext(229, 107, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc2f8556bd8e47d397553c318cb8df12", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd21c76d2caf4f0cb5103a117c5b31b4", async() => {
                 BeginContext(276, 56, true);
                 WriteLiteral("<i class=\"glyphicon glyphicon-plus\"></i> Add Publication");
                 EndContext();
@@ -231,7 +231,7 @@ WriteAttributeValue("", 2335, item.ProductImages.FirstOrDefault().ImageFullPath,
             WriteLiteral("                                ");
             EndContext();
             BeginContext(2899, 130, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c34b99315fc46ebb384b759dcd61bd9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d088f3f49fd44d9ca65cd4c7194aa15d", async() => {
                 BeginContext(2968, 57, true);
                 WriteLiteral("Details <i class=\"glyphicon glyphicon-align-justify\"></i>");
                 EndContext();

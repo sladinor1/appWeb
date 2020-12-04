@@ -1,0 +1,13 @@
+﻿@model IEnumerable<appWeb.Common.Entities.History>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Prediction</h2>
+
+@foreach (var item in Model)
+{
+    <div>
+        @Html.DisplayFor(i => item.Name)
+    </div>
+}

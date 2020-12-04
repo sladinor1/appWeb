@@ -63,3 +63,4 @@ C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.pdb
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.genruntimeconfig.cache
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\appWeb.Web.csproj.CoreCompileInputs.cache
 C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\Razor\Views\Categories\Filter.cshtml.g.cs
+C:\Proyectos\appWeb\appWeb.Web\obj\Debug\netcoreapp2.1\Razor\Views\Predictions\Index.cshtml.g.cs

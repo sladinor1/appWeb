@@ -30,6 +30,8 @@ namespace appWeb.Web.Data
 
         public DbSet<Message> Messages { get; set; }
 
+        public DbSet<History> Histories { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
