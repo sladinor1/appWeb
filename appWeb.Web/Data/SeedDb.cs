@@ -24,7 +24,7 @@ namespace appWeb.Web.Data
             await _context.Database.EnsureCreatedAsync();
             await CheckRolesAsync();
             await CheckUserAsync("1010", "Santiago", "Ladino", "sladinor@unal.edu.co", "322 311 4620", UserType.Admin);
-            await CheckUserAsync("1234", "Santi", "Ladi", "santilr_santafe@hotmail.com", "300 311 7699", UserType.User);
+            await CheckUserAsync("1020", "Octavio", "Salcedo", "ojsalcedop@unal.edu.co", "311 311 4620", UserType.Admin);
         }
 
         private async Task CheckRolesAsync()

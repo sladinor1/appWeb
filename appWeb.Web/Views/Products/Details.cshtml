@@ -1,4 +1,4 @@
-﻿@model appWeb.Common.Entities.Product
+﻿@model appWeb.Web.Models.ProductCatalogyViewModel
 
 @{
     ViewData["Title"] = "Details";
@@ -34,9 +34,14 @@
         <dd>
             @Html.DisplayFor(model => model.Price)
         </dd>
+        <dd>
+            @if (Model.ProductImages != null)
+            {
+                <img src="@Model.ProductImages.FirstOrDefault().ImageFullPath" style="width:100px;height:100px;max-width: 100%; height: auto;" />
+            }
+        </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

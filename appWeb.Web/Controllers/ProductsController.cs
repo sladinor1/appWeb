@@ -58,15 +58,30 @@ namespace appWeb.Web.Controllers
             {
                 return NotFound();
             }
-
             var product = await _context.Products
                 .FirstOrDefaultAsync(m => m.Id == id);
+            var images = await _context.ProductImages.Where(p => p.ProductId == id).ToListAsync();
+            ICollection<ProductImage> list = new Collection<ProductImage>();
+            foreach (var i in images)
+            {
+                list.Add(i);
+            }
+      
             if (product == null)
             {
                 return NotFound();
             }
 
-            return View(product);
+            return View(new ProductCatalogyViewModel
+            {
+                Id = product.Id,
+                Description = product.Description,
+                Tittle = product.Tittle,
+                Author = product.Author,
+                Price = product.Price,
+                Lot = product.Lot,
+                ProductImages = list
+            });
         }
 
         [Authorize(Roles = "User,Admin")]
@@ -102,6 +117,10 @@ namespace appWeb.Web.Controllers
                 product.Price = productcatalogyviewmodel.Price;
                 product.Lot = productcatalogyviewmodel.Lot;
                 string filePath = "";
+                if (Pimage == null)
+                {
+                    return View(productcatalogyviewmodel);
+                }
                 if (Pimage != null)
                 {
                     filePath = $"wwwroot/images/Products/{Pimage.FileName}";
@@ -265,11 +284,9 @@ namespace appWeb.Web.Controllers
             return View(productcatalogyviewmodel);
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Set_Publications()
-        //{
-        //    return View(await _context.Products.Where(p => p.Author == User.Identity.Name).ToListAsync());
-        //}
+        public async Task<IActionResult> Chat()
+        {
+            return RedirectToAction("Chat","Account");
+        }
     }
 }
